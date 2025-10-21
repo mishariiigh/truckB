@@ -1,0 +1,17 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 12px;
+}
+
+html, body {
+  height: 100%;
+}
+
+.gradient-bg {
+  background-image: radial-gradient(1200px 600px at 10% 0%, rgba(255, 79, 130, .15), transparent 60%),
+    radial-gradient(1200px 600px at 90% 0%, rgba(44, 201, 132, .12), transparent 60%);
+}
