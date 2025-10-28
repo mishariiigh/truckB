@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: 'Book the sweetest truck for your next event.',
     type: 'website',
     url: 'https://example.com',
-    images: [{ url: 'https://images.unsplash.com/photo-1495197359483-d092478c170a?w=1200' }]
+    images: [{ url: '/images/truck2.png' }]
   },
   twitter: {
     card: 'summary_large_image',
