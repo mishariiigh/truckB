@@ -4,11 +4,11 @@ import Link from 'next/link';
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden rounded-2xl border border-zinc-100 mt-8">
+    <section className="relative overflow-hidden rounded-2xl border border-zinc-200 mt-8">
       <div className="grid md:grid-cols-2">
         <div className="p-8 sm:p-12">
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Joy on wheels, scooped fresh.
+          Ottawa Cool Treats
           </h1>
           <p className="mt-4 text-zinc-700">
             Classic cones, dairy-free delights, and seasonal flavors—delivered curbside. Book the sweetest truck for your next event.
@@ -23,13 +23,13 @@ export function Hero() {
           </div>
         </div>
         <div className="relative h-72 md:h-full">
-          <Image
-            src="https://images.unsplash.com/photo-1495197359483-d092478c170a?w=1600&q=80&auto=format&fit=crop"
-            alt="Ice cream scoops"
-            fill
-            className="object-cover"
-            priority
-          />
+        <Image
+  src="/images/truck1.jpeg"  // ✅ leading slash is required
+  alt="Ice Cream Truck"
+  fill
+  className="object-cover"
+  priority
+/>
         </div>
       </div>
     </section>

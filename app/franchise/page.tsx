@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <>
       <h1 className="mt-10 text-3xl font-bold">Franchise</h1>
-      <p className="mt-3 text-zinc-700">Bring Frosty Wheels to your city with turnkey support and training.</p>
+      <p className="mt-3 text-zinc-700">Bring <b>Ottawa Cool Treats</b> to your city with turnkey support and training.</p>
       <Section title="What you get" subtitle="We set you up for success.">
         <ul className="grid sm:grid-cols-2 gap-4">
           <li className="rounded-xl border border-zinc-200 p-4">

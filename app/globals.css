@@ -3,15 +3,57 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🍦 Pastel color palette inspired by ice cream shades */
 :root {
-  --radius: 12px;
+  --radius: 16px;
+  --brand-pink: #ffe4ec;
+  --brand-blue: #e3f4ff;
+  --brand-mint: #e7fff2;
+  --brand-yellow: #fff9d9;
+  --brand-cream: #fffdf8;
+  --text-main: #2a2a2a;
+  --shadow-soft: rgba(0, 0, 0, 0.05);
 }
 
 html, body {
   height: 100%;
+  background-color: var(--brand-cream);
+  color: var(--text-main);
+  font-family: 'Cairo', sans-serif;
 }
 
+/* 🍨 Gentle, balanced pastel gradient background */
 .gradient-bg {
-  background-image: radial-gradient(1200px 600px at 10% 0%, rgba(255, 79, 130, .15), transparent 60%),
-    radial-gradient(1200px 600px at 90% 0%, rgba(44, 201, 132, .12), transparent 60%);
+  background-image:
+    radial-gradient(900px 500px at 10% 10%, rgba(255, 228, 236, 0.4), transparent 70%),
+    radial-gradient(900px 500px at 90% 10%, rgba(227, 244, 255, 0.4), transparent 70%),
+    radial-gradient(800px 400px at 50% 90%, rgba(231, 255, 242, 0.4), transparent 80%);
+  background-color: var(--brand-cream);
+}
+
+/* 🧁 Smooth rounded corners and light shadows for all cards/elements */
+* {
+  border-radius: var(--radius);
+}
+
+.card {
+  background: white;
+  box-shadow: 0 6px 18px var(--shadow-soft);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+}
+
+/* 🍧 Interactive, bouncy hover for links and buttons */
+a, button {
+  transition: all 0.25s ease-in-out;
+}
+
+a:hover, button:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.05);
+}
+
+/* 🍦 Subtle divider or border color */
+hr {
+  border-color: rgba(0, 0, 0, 0.05);
 }

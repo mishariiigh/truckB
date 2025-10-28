@@ -6,13 +6,13 @@ import { Nav } from '@/components/Nav';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Frosty Wheels — Ice Cream Truck',
-    template: '%s | Frosty Wheels'
+    default: 'Ottawa Cool Treats — Ice Cream Truck',
+    template: '%s | Ottawa Cool Treats',
   },
   description: 'Mobile ice cream truck serving classic cones, dairy-free treats, and seasonal flavors across Gatineau & Ottawa.',
   keywords: ['ice cream', 'truck', 'desserts', 'Gatineau', 'Ottawa', 'events', 'catering'],
   openGraph: {
-    title: 'Frosty Wheels — Ice Cream Truck',
+    title: 'Ottawa Cool Treats — Ice Cream Truck',
     description: 'Book the sweetest truck for your next event.',
     type: 'website',
     url: 'https://example.com',
@@ -20,12 +20,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Frosty Wheels — Ice Cream Truck',
+    title: 'Ottawa Cool Treats — Ice Cream Truck',
     description: 'Bringing joy one scoop at a time.',
   },
   icons: {
     icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png'
+    apple: '/favicon.ico'
   }
 };
 

@@ -19,7 +19,7 @@ export function Nav() {
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-zinc-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="font-bold text-brand-600 tracking-tight text-lg">
-          Frosty Wheels
+          Ottawa Cool Treats
         </Link>
         <nav className="hidden md:flex gap-6">
           {links.map(l => (

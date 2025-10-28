@@ -11,16 +11,16 @@ export default function Page() {
         <div>
           <h1 className="text-3xl font-bold">Rooted in community</h1>
           <p className="mt-4 text-zinc-700">
-            Frosty Wheels started as a summer passion and grew into a neighborhood staple. We believe joy should be accessible—one scoop, one smile, one street at a time.
+          Ottawa Cool Treats began as a small summer dream and quickly became a local favorite. We’re all about spreading happiness—one cone, one smile, and one neighborhood at a time.
           </p>
           <p className="mt-3 text-zinc-700">
-            Our truck operates across Gatineau & Ottawa with a focus on local events, schools, and small businesses.
+            Our truck operates across <strong><u>Gatineau & Ottawa</u></strong> with a focus on local events, schools, and small businesses.
           </p>
         </div>
         <div className="relative h-64">
           <Image
-            src="https://images.unsplash.com/photo-1551022372-0bdac482b9a6?w=1200&q=80&auto=format&fit=crop"
-            alt="Ice cream truck in the neighborhood"
+            src="/images/truck2.jpeg"  // ✅ leading slash is required
+            alt="Ice Cream Truck"
             fill
             className="object-cover rounded-xl border border-zinc-100"
           />
