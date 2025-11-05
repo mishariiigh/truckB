@@ -5,7 +5,7 @@ export const metadata = { title: 'Gallery' };
 
 const photos = [
   '/images/truck2.jpeg',
-  '/images/icecream1.jpeg',
+  '/images/truck11.jpeg',
   '/images/icecream2.jpeg',
   '/images/truck3.jpeg',
   '/images/truck4.jpeg',
