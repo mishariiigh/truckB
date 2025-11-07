@@ -1,83 +1,132 @@
-// app/menu/page.tsx
-import { Section } from '@/components/Section';
+"use client";
 
-export const metadata = { title: 'Menu' };
+import Image from "next/image";
 
 const categories = [
   {
-    name: 'Ice Cream',
-    color: 'bg-amber-50 border-amber-200 text-amber-900',
+    // Creative & Shorter Title
+    name: "Signature Creations", 
+    bgColor: "bg-pink-400", // Soft Pink
+    textColor: "text-white", // white for the Category Title
+    image: "/images/icecream5.png",
     items: [
-      { name: 'Vanilla', desc: 'Classic creamy flavor', price: '$5' },
-      { name: 'Chocolate', desc: 'Rich cocoa delight', price: '$5' },
-      { name: 'Mixed', desc: 'Vanilla & chocolate swirl', price: '$5' }
-    ]
+      { name: "Blueberry", price: "$7" },
+      { name: "Pineapple", price: "$7" },
+      { name: "Butterscotch", price: "$7" },
+      { name: "Strawberry", price: "$7" },
+      { name: "Banana Boat", price: "$9" },
+    ],
   },
   {
-    name: 'Milk Shakes',
-    color: 'bg-pink-50 border-pink-200 text-pink-900',
+    // Creative & Shorter Title
+    name: "Frosty Chillers", 
+    bgColor: "bg-blue-300", // Icy Blue
+    textColor: "text-white", 
+    image: "/images/icecream5.png",
     items: [
-      { name: 'Strawberry', desc: 'Sweet berry blend', price: '$6' },
-      { name: 'Banana', desc: 'Creamy fruit shake', price: '$6' },
-      { name: 'Vanilla', desc: 'Classic milkshake', price: '$6' },
-      { name: 'Chocolate', desc: 'Chocolate lover\'s dream', price: '$6' }
-    ]
+      { name: "Strawberry Slush", price: "$6" },
+      { name: "Raspberry Slush", price: "$6" },
+      { name: "Blueberry Slush", price: "$6" },
+      { name: "Lemon Lime Slush", price: "$6" },
+      { name: "Bubble Gum Slush", price: "$6" },
+      { name: "Orange Slush", price: "$6" },
+      { name: "Grape Slush", price: "$6" },
+      { name: "Cherry Slush", price: "$6" },
+      { name: "Iceberg (Slush + Ice Cream)", price: "$8" },
+      { name: "Peanut Buster", price: "$8" },
+    ],
   },
   {
-    name: 'Slush',
-    color: 'bg-blue-50 border-blue-200 text-blue-900',
+    // Creative & Shorter Title
+    name: "Creamy Shakes", 
+    bgColor: "bg-yellow-300", // Vanilla/Cream Yellow
+    textColor: "text-white", 
+    image: "/images/icecream5.png",
     items: [
-      { name: 'Orange', desc: 'Citrus burst', price: '$4' },
-      { name: 'Lemon Lime', desc: 'Tangy refreshment', price: '$4' },
-      { name: 'Cherry', desc: 'Sweet red classic', price: '$4' },
-      { name: 'Grape', desc: 'Fruity purple delight', price: '$4' },
-      { name: 'Blue Raspberry', desc: 'Electric blue fun', price: '$4' },
-      { name: 'Strawberry', desc: 'Berry slush treat', price: '$4' },
-      { name: 'Bubble Gum', desc: 'Sweet pink classic', price: '$4' }
-    ]
+      { name: "Strawberry Milk Shake", price: "$6" },
+      { name: "Chocolate Milk Shake", price: "$6" },
+      { name: "Vanilla Milk Shake", price: "$6" },
+      { name: "Banana Milk Shake", price: "$6" },
+    ],
   },
   {
-    name: 'Sundaes',
-    color: 'bg-purple-50 border-brown-200 text-brown-900',
+    // Creative & Shorter Title
+    name: "Scoops & Dips", 
+    bgColor: "bg-green-300", // Mint Green
+    textColor: "text-white", 
+    image: "/images/icecream5.png",
     items: [
-      { name: 'Strawberry', desc: 'Berry topping delight', price: '$7' },
-      { name: 'Chocolate', desc: 'Fudge sundae classic', price: '$7' },
-      { name: 'Butter', desc: 'Butterscotch sundae', price: '$7' },
-      { name: 'Pineapple', desc: 'Tropical treat', price: '$7' },
-      { name: 'Blueberry', desc: 'Berry bliss sundae', price: '$7' }
-    ]
+      { name: "Vanilla Soft Serve", price: "$4" },
+      { name: "Chocolate Soft Serve", price: "$4" },
+      { name: "Twist Soft Serve", price: "$4" },
+      { name: "Sugar Cone", price: "$0.50" },
+      { name: "Waffle Cone", price: "$1.50" },
+      { name: "Sprinkles", price: "$1" },
+      { name: "Choc Dip", price: "$1.50" },
+      { name: "Dip & Sprinkles", price: "$2.50" },
+      { name: "Dip & Peanuts", price: "$2.50" },
+      { name: "Cartwheel", price: "$5" },
+    ],
   },
-  {
-    name: 'Cones & Cups',
-    color: 'bg-orange-50 border-orange-200 text-orange-900',
-    items: [
-      { name: 'Waffle Cone', desc: 'Fresh-baked cone', price: '$1.5 add-on' },
-      { name: 'Sprinkle Cone', desc: 'Colorful sprinkles', price: '$2 add-on' },
-      { name: 'Choc Dip', desc: 'Chocolate coated cone', price: '$2 add-on' }
-    ]
-  }
 ];
 
 export default function Page() {
   return (
-    <>
-      <h1 className="mt-10 text-3xl font-bold">Menu</h1>
-      <p className="mt-3 text-zinc-700">Seasonal flavors rotate—ask our crew what's new today.</p>
-      {categories.map(cat => (
-        <Section key={cat.name} title={cat.name}>
-          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {cat.items.map(i => (
-              <li key={i.name} className={`rounded-xl border p-4 ${cat.color}`}>
-                <div className="flex items-center justify-between">
-                  <p className="font-semibold">{i.name}</p>
-                  <p className="text-sm opacity-80">{i.price}</p>
-                </div>
-                <p className="text-sm opacity-80 mt-1">{i.desc}</p>
-              </li>
-            ))}
-          </ul>
-        </Section>
-      ))}
-    </>
+    <div className="py-8 px-4 max-w-5xl mx-auto font-sans">
+      {/* Main title section */}
+      <h1 className="text-center text-3xl font-black text-pink-600 drop-shadow-lg [text-shadow:1px_1px_3px_rgba(0,0,0,0.1)]">
+        🍦 The Creamery Menu 🍨
+      </h1>
+      <p className="text-center text-gray-600 mt-2 mb-8 text-base italic">
+        Dive into every scoop — handcrafted & made fresh daily.
+      </p>
+
+      {/* Grid container */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {categories.map((cat) => (
+          <div
+            key={cat.name}
+            className={`rounded-xl border-2 border-white shadow-lg hover:shadow-pink-500/30 transition-shadow duration-300 overflow-hidden flex flex-col ${cat.bgColor}`}
+          >
+            {/* Image Header Section */}
+            <div className="relative h-40 md:h-52 lg:h-64 rounded-t-xl overflow-hidden group">
+              <Image
+                src={cat.image}
+                alt={cat.name}
+                fill
+                className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                priority
+              />
+
+              {/* Gradient overlay for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
+              {/* Category Name - Font size reduced here */}
+              <h2 className={`absolute bottom-3 left-4 text-base md:text-m font-extrabold drop-shadow-md uppercase tracking-wide ${cat.textColor}`}>
+                {cat.name}
+              </h2>
+
+              {/* Decorative pulse accent */}
+              <div className="absolute top-2 right-2 w-3 h-3 rounded-full bg-yellow-100/90 shadow-md animate-ping-slow"></div>
+            </div>
+
+            {/* Menu Items Section */}
+            <div className="p-4 flex flex-col flex-grow bg-white/50 backdrop-blur-sm">
+              <ul className="space-y-1 mt-2">
+                {cat.items.map((item) => (
+                  <li
+                    key={item.name}
+                    className="flex justify-between text-md font-bold border-b border-gray-300 pb-0.5 text-gray-900" 
+                  >
+                    <p>{item.name}</p>
+                    <p className="font-extrabold text-pink-600">{item.price}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

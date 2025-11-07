@@ -35,7 +35,7 @@ export default function Page() {
           <Card 
             title="Chocolate Wave" 
             desc="Rich, decadent cocoa that chocolate lovers dream about"
-            className="bg-brown-50 border-brown-200"
+            className="bg-blue-50 border-blue-200"
           />
           <Card 
             title="Strawberry Swirl" 
@@ -94,11 +94,8 @@ export default function Page() {
       <Section title="Find Your Sweet Spot" subtitle="Follow the joy—catch us around town!">
         <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-2xl p-8 text-center border border-red-100">
           <h3 className="text-2xl font-bold text-red-900 mb-4">Ready for a Sweet Adventure?</h3>
-          <p className="text-red-700 mb-6">Track our live location and see where we're serving smiles today</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/locations" className="inline-flex items-center rounded-full bg-red-500 px-6 py-3 text-white font-semibold hover:bg-red-600 transition-all">
-              📍 Find Our Truck
-            </Link>
+
             <Link href="/menu" className="inline-flex items-center rounded-full bg-white px-6 py-3 text-red-500 font-semibold hover:bg-red-50 transition-all border border-red-200">
               🍭 View Full Menu
             </Link>

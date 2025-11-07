@@ -17,7 +17,7 @@ export function Hero() {
             <Link href="/contact" className="inline-flex items-center rounded-md bg-brand-500 px-4 py-2 text-white hover:bg-brand-600">
               Book the truck
             </Link>
-            <Link href="/menu" className="inline-flex items-center rounded-md border border-zinc-200 px-4 py-2 hover:border-brand-500 hover:text-brand-600">
+            <Link href="/menu" className="inline-flex items-center rounded-md border border-zinc-400 px-4 py-2 hover:border-brand-500 hover:text-brand-600">
               Explore menu
             </Link>
           </div>

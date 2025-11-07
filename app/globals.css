@@ -3,57 +3,105 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 🍦 Pastel color palette inspired by ice cream shades */
+/* 🍦 Swirl & Scoop Pop Art Palette – High-Contrast & Playful */
 :root {
-  --radius: 16px;
-  --brand-pink: #ffe4ec;
-  --brand-blue: #e3f4ff;
-  --brand-mint: #e7fff2;
-  --brand-yellow: #fff9d9;
-  --brand-cream: #fffdf8;
-  --text-main: #2a2a2a;
-  --shadow-soft: rgba(0, 0, 0, 0.05);
+  --radius: 8px; /* Sharper corners for modern pop feel */
+
+  /* Base Background Colors (from your request) */
+  --base-pink: #ffe4ec; /* Light Pink */
+  --base-blue: #e3f4ff; /* Light Blue */
+
+  /* Primary High Contrast Accents (from your original theme) */
+  --accent-red: #ff4d6d; /* VIVID RED/PINK */
+  --accent-teal: #35e3c1; /* VIVID TEAL */
+
+  --text-main: #2a2a2a; /* Dark text for contrast */
+  --surface-white: #ffffff;
+
+  /* Shadows for the 'Pop' effect */
+  --shadow-card-pop: 8px 8px 0 0 var(--accent-teal); /* Strong offset shadow for cards */
 }
 
+/* 🎨 Body and html – SHARP, NOTICEABLE SPLIT BACKGROUND */
 html, body {
   height: 100%;
-  background-color: var(--brand-cream);
   color: var(--text-main);
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.5;
+
+  /* High-contrast diagonal split using the two light background colors */
+  background: linear-gradient(135deg, var(--base-pink) 50%, var(--base-blue) 50%);
+  background-attachment: fixed;
 }
 
-/* 🍨 Gentle, balanced pastel gradient background */
-.gradient-bg {
-  background-image:
-    radial-gradient(900px 500px at 10% 10%, rgba(255, 228, 236, 0.4), transparent 70%),
-    radial-gradient(900px 500px at 90% 10%, rgba(227, 244, 255, 0.4), transparent 70%),
-    radial-gradient(800px 400px at 50% 90%, rgba(231, 255, 242, 0.4), transparent 80%);
-  background-color: var(--brand-cream);
-}
-
-/* 🧁 Smooth rounded corners and light shadows for all cards/elements */
+/* 🖼️ Cards and Containers – Sticker/Pop Art Effect */
 * {
   border-radius: var(--radius);
 }
 
 .card {
-  background: white;
-  box-shadow: 0 6px 18px var(--shadow-soft);
+  background: var(--surface-white);
+  border: 3px solid var(--text-main); /* Thick, defined outline */
+  box-shadow: var(--shadow-card-pop); /* Strong offset shadow */
   padding: 1.5rem;
   border-radius: var(--radius);
+  transition: all 0.2s ease-out;
 }
 
-/* 🍧 Interactive, bouncy hover for links and buttons */
+.card:hover {
+  /* Shifts the card up and left to match the shadow's offset */
+  transform: translate(-4px, -4px);
+  /* Changes the shadow color on hover for a high-impact effect */
+  box-shadow: 12px 12px 0 0 var(--accent-red);
+}
+
+/* 🌟 Headings – Bold and Clean (Shadow removed per request) */
+h1, h2, h3, h4 {
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: var(--text-main);
+  /* Text shadow is removed for cleaner look */
+}
+
+/* 🎈 Buttons – Bubble Gum Burst Effect */
 a, button {
-  transition: all 0.25s ease-in-out;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Springy transition */
+  border-radius: var(--radius);
+  cursor: pointer;
+  outline: none;
 }
 
-a:hover, button:hover {
-  transform: translateY(-3px);
-  filter: brightness(1.05);
+.btn-primary {
+  background-color: var(--accent-red);
+  color: var(--surface-white);
+  padding: 0.75rem 1.75rem; /* Slightly larger padding */
+  font-weight: 800;
+  text-transform: uppercase;
+  border: 3px solid var(--text-main);
+  /* Strong bottom shadow for 3D lift */
+  box-shadow: 0 6px 0 0 var(--text-main);
 }
 
-/* 🍦 Subtle divider or border color */
+.btn-primary:hover {
+  background-color: var(--accent-teal); /* Color swap on hover */
+  color: var(--text-main); /* Dark text on light teal background */
+  /* Jumps up and expands shadow */
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 0 0 var(--accent-red); /* Shadow grows and changes color */
+  border-radius: 12px; /* Slight deformation/expansion */
+}
+
+/* 🍰 Divider – Simple and defined */
 hr {
-  border-color: rgba(0, 0, 0, 0.05);
+  border: none;
+  height: 2px;
+  background-color: var(--text-main);
+  opacity: 0.1;
+  margin: 1.5rem 0;
 }
+
+/* Utility classes for accents */
+.text-red-accent { color: var(--accent-red); }
+.bg-teal-accent { background-color: var(--accent-teal); }
+.border-dark { border-color: var(--text-main); }

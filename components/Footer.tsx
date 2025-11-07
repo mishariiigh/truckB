@@ -13,8 +13,6 @@ export function Footer() {
           <p className="font-semibold text-zinc-900">Quick links</p>
           <ul className="mt-2 space-y-1 text-sm">
             <li><Link href="/menu" className="hover:text-brand-600">Menu</Link></li>
-            <li><Link href="/locations" className="hover:text-brand-600">Locations</Link></li>
-            <li><Link href="/franchise" className="hover:text-brand-600">Franchise</Link></li>
           </ul>
         </div>
         <div>
