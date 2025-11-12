@@ -22,7 +22,7 @@ const categories = [
     name: "Frosty Chillers", 
     bgColor: "bg-blue-300", // Icy Blue
     textColor: "text-white", 
-    image: "/images/icecream5.png",
+    image: "/images/slush.png",
     items: [
       { name: "Strawberry Slush", price: "$6" },
       { name: "Raspberry Slush", price: "$6" },
@@ -41,7 +41,7 @@ const categories = [
     name: "Creamy Shakes", 
     bgColor: "bg-yellow-300", // Vanilla/Cream Yellow
     textColor: "text-white", 
-    image: "/images/icecream5.png",
+    image: "/images/milkshake.png",
     items: [
       { name: "Strawberry Milk Shake", price: "$6" },
       { name: "Chocolate Milk Shake", price: "$6" },
@@ -54,7 +54,7 @@ const categories = [
     name: "Scoops & Dips", 
     bgColor: "bg-green-300", // Mint Green
     textColor: "text-white", 
-    image: "/images/icecream5.png",
+    image: "/images/softserve.png",
     items: [
       { name: "Vanilla Soft Serve", price: "$4" },
       { name: "Chocolate Soft Serve", price: "$4" },
@@ -101,8 +101,10 @@ export default function Page() {
               {/* Gradient overlay for text readability */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 
-              {/* Category Name - Font size reduced here */}
-              <h2 className={`absolute bottom-3 left-4 text-base md:text-m font-extrabold drop-shadow-md uppercase tracking-wide ${cat.textColor}`}>
+              {/* Category Name */}
+              <h2
+                className={`absolute bottom-3 left-4 text-base md:text-m font-extrabold drop-shadow-md uppercase tracking-wide ${cat.textColor}`}
+              >
                 {cat.name}
               </h2>
 
@@ -116,7 +118,7 @@ export default function Page() {
                 {cat.items.map((item) => (
                   <li
                     key={item.name}
-                    className="flex justify-between text-md font-bold border-b border-gray-300 pb-0.5 text-gray-900" 
+                    className="flex justify-between text-md font-bold border-b border-gray-300 pb-0.5 text-gray-900"
                   >
                     <p>{item.name}</p>
                     <p className="font-extrabold text-pink-600">{item.price}</p>
@@ -126,6 +128,18 @@ export default function Page() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* --- New Separate Image Section --- */}
+      <div className="mt-16 flex justify-center">
+        <Image
+          src="/images/RealMenu.jpeg" // replace with your actual image
+          alt="Ice cream collection"
+          width={900}
+          height={400}
+          className="rounded-2xl shadow-lg object-cover"
+          priority
+        />
       </div>
     </div>
   );
