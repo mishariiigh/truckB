@@ -36,7 +36,7 @@ export async function POST(req: Request) {
     // Email content
     const mailOptions = {
       // Set 'from' to the sender email with a friendly display name for better clarity.
-      from: `"Your Website Name" <${senderEmail}>`, 
+      from: `"Ottawa Cool treat" <${senderEmail}>`, 
       // The destination email (where you receive the inquiries)
       to: senderEmail, 
       subject: `New inquiry from ${name}`,
