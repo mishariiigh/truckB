@@ -12,7 +12,7 @@ export default function Page() {
         <ContactForm />
         <div className="mt-8 rounded-xl border border-zinc-200 p-4">
           <p className="font-semibold">Direct</p>
-          <p className="text-sm text-zinc-700 mt-1">Email: ottawacooltreat@gmail.com</p>
+          <p className="text-sm text-zinc-700 mt-1">Email: <a href="mailto:ottawacooltreat@gmail.com">ottawacooltreat@gmail.com</a> </p>
           <p className="text-sm text-zinc-700">Phone: +1 (613) 855-6779</p>
           <p className="text-sm text-zinc-700 mt-1">Service area: Gatineau & Ottawa</p>
         </div>
