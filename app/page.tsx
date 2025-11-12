@@ -73,7 +73,7 @@ export default function Page() {
       <Section title="Everyone's Welcome" subtitle="Delicious options for every dietary need">
         <div className="grid sm:grid-cols-3 gap-4">
           <Card 
-            title="Dairy-Free Delights" 
+            title="Delights" 
             desc="Creamy sorbets and fruit-freezes that everyone can enjoy" 
             badge="🌱 Vegan"
             className="bg-green-50 border-green-200"

@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid gap-6 sm:grid-cols-3">
         <div>
           <p className="font-semibold text-zinc-900">Ottawa Cool Treats</p>
-          <p className="text-sm text-zinc-600 mt-2">Serving Ottawa & Gatineau. Book us for parties, corporate events, and festivals.</p>
+          <p className="text-sm text-zinc-600 mt-2">Serving Ottawa. Book us for <b>parties</b>, <b>Corporate events</b>, and <b>Festivals</b>.</p>
         </div>
         <div>
           <p className="font-semibold text-zinc-900">Quick links</p>
@@ -19,7 +19,7 @@ export function Footer() {
           <p className="font-semibold text-zinc-900">Contact</p>
           <p className="text-sm text-zinc-600 mt-2">ottawacooltreat@gmail.com</p>
           <p className="text-sm text-zinc-600">+1 (613) 855-6779</p>
-          <p className="text-xs text-zinc-500 mt-4">© {new Date().getFullYear()} Frosty Wheels. All rights reserved.</p>
+          <p className="text-xs text-zinc-500 mt-4">© {new Date().getFullYear()} Ottawa Cool Treat. All rights reserved.</p>
         </div>
       </div>
     </footer>

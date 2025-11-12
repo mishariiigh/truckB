@@ -6,10 +6,19 @@ import Image from 'next/image';
 const photos = [
   '/images/truck2.jpeg',
   '/images/truck1.jpeg',
-  '/images/icecream2.jpeg',
   '/images/truck3.jpeg',
   '/images/truck4.jpeg',
   '/images/truck5.jpeg',
+  '/images/pi1.jpeg',
+  '/images/pi2.jpeg',
+  '/images/pi3.jpeg',
+  '/images/pi4.jpeg',
+  '/images/pi5.jpeg',
+  '/images/pi6.jpeg',
+  '/images/icecream2.jpeg',
+
+
+
 ];
 
 export default function Page() {

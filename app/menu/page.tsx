@@ -5,7 +5,7 @@ import Image from "next/image";
 const categories = [
   {
     // Creative & Shorter Title
-    name: "Signature Creations", 
+    name: "Sundae", 
     bgColor: "bg-pink-400", // Soft Pink
     textColor: "text-white", // white for the Category Title
     image: "/images/icecream5.png",
@@ -19,7 +19,7 @@ const categories = [
   },
   {
     // Creative & Shorter Title
-    name: "Frosty Chillers", 
+    name: "slushi", 
     bgColor: "bg-blue-300", // Icy Blue
     textColor: "text-white", 
     image: "/images/slush.png",
@@ -38,7 +38,7 @@ const categories = [
   },
   {
     // Creative & Shorter Title
-    name: "Creamy Shakes", 
+    name: "Milk Shakes", 
     bgColor: "bg-yellow-300", // Vanilla/Cream Yellow
     textColor: "text-white", 
     image: "/images/milkshake.png",
@@ -51,7 +51,7 @@ const categories = [
   },
   {
     // Creative & Shorter Title
-    name: "Scoops & Dips", 
+    name: "Scoops, Dips and Cones", 
     bgColor: "bg-green-300", // Mint Green
     textColor: "text-white", 
     image: "/images/softserve.png",
@@ -78,7 +78,7 @@ export default function Page() {
         🍦 The Creamery Menu 🍨
       </h1>
       <p className="text-center text-gray-600 mt-2 mb-8 text-base italic">
-        Dive into every scoop — handcrafted & made fresh daily.
+        Dive into every scoop... handcrafted & made fresh daily.
       </p>
 
       {/* Grid container */}

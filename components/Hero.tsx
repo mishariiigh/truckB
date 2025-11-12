@@ -11,7 +11,7 @@ export function Hero() {
           Ottawa Cool Treats
           </h1>
           <p className="mt-4 text-zinc-700">
-            Classic cones, dairy-free delights, and seasonal flavors—delivered curbside. Book the sweetest truck for your next event.
+            Classic cones, and seasonal flavors... delivered curbside. Book the sweetest truck for your next event.
           </p>
           <div className="mt-6 flex gap-3">
             <Link href="/contact" className="inline-flex items-center rounded-md bg-brand-500 px-4 py-2 text-white hover:bg-brand-600">

@@ -9,8 +9,8 @@ export const metadata: Metadata = {
     default: 'Ottawa Cool Treats — Ice Cream Truck',
     template: '%s | Ottawa Cool Treats',
   },
-  description: 'Mobile ice cream truck serving classic cones, dairy-free treats, and seasonal flavors across Gatineau & Ottawa.',
-  keywords: ['ice cream', 'truck', 'desserts', 'Gatineau', 'Ottawa', 'events', 'catering'],
+  description: 'Mobile ice cream truck serving classic cones, and seasonal flavors across Ottawa.',
+  keywords: ['ice cream', 'truck', 'desserts', 'Ottawa', 'events', 'catering'],
   metadataBase: new URL('http://localhost:3000'), // Replace with your actual domain
   openGraph: {
     title: 'Ottawa Cool Treats — Ice Cream Truck',

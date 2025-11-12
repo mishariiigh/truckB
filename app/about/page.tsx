@@ -14,7 +14,7 @@ export default function Page() {
             What started as a family dream to bring joy to our community has blossomed into Ottawa's favorite ice cream experience. We believe every day deserves a little sweetness, and we're here to deliver it with smiles and sprinkles.
           </p>
           <p className="mt-3 text-zinc-700">
-            You'll find us serving up happiness across <strong>Ottawa & Gatineau</strong>—at local parks, community events, and neighborhood gatherings. Follow our journey to see where we'll pop up next!
+            You'll find us serving up happiness across <strong>Ottawa</strong>—at local parks, community events, and neighborhood gatherings. Follow our journey to see where we'll pop up next!
           </p>
         </div>
         <div className="relative h-64">
